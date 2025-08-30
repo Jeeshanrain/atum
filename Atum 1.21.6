@@ -1,0 +1,20 @@
+package com.example.atummod;
+
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+
+public class AtumMod implements ModInitializer {
+
+    public static final String MOD_ID = "atummod";
+
+    @Override
+    public void onInitialize() {
+        // Called when the mod is initialized
+        System.out.println("AtumMod for Minecraft 1.21.6 initialized!");
+
+        // Example: register a server tick event handler
+        ServerTickEvents.END_SERVER_TICK.register(server -> {
+            // Code to execute every server tick
+        });
+    }
+}
